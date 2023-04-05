@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do list</title>
+    <style>
+#dv1{
+    height:700px;
+    width:95%;
+    margin-left:40px;
+    background-image: linear-gradient(to right,blue,purple,pink,rgb(91, 161, 161),rgb(159, 140, 140));
+    padding-top: 50px;
+}
+#dv2{
+    
+    height:650px; 
+    width:600px;
+     border:4px solid white;
+     margin-left:450px; 
+     border-radius: 8px;
+     box-shadow: 10px 10px 5px 10px rgb(156, 84, 145);
+     
+     
+}
+#dv3{
+    height:500px;
+    width:450px;
+    background-color: white;
+    border: 3px solid purple;
+    border-radius: 8px;
+    margin-left:70px;
+    box-shadow: 10px 10px 5px 10px grey;
+    font-size:30px;
+    cursor:pointer;
+}
+#type{
+    font-size:30px;
+     border-radius: 7px; 
+     border-color: purple;
+     margin-left:25px;
+     margin-top:20px;
+     
+     
+}
+#btn{
+    border-radius: 7px; 
+    background-color: purple;
+    color:white; 
+    font-size:28px;
+    box-shadow: 10px 10px 5px  grey;
+}
+#rem{
+    height:25px;
+    width:60px;
+    float:right;
+    margin-top:380px;
+    background-color:purple;
+    color:white;
+    box-shadow: 10px 5px 5px  grey;
+    border-radius: 7px; 
+    position: fixed;
+    margin-left: 500px;
+    margin-top: 600px;
+}
+
+
+
+
+
+    </style>
+</head>
+<script src="https://kit.fontawesome.com/a6c5ed9944.js" crossorigin="anonymous"></script>
+<body>
+    <div id="dv1">
+    
+        <div  id="dv2">
+            <button id="rem" onclick="cl2()" >Remove</button>
+
+<h1 style="font-family: Cambria;text-align: center;">My To Do List For Vacations:-</h1>
+<div id="dv3">
+
+<input type="text" size="18" id="type"  >
+    
+
+<button id="btn" onclick="cl()" >Add</button>
+<ol id ="num"></ol> 
+
+</div>
+
+
+
+</div>
+
+</div>
+
+    
+</body>
+<script>
+     
+    function cl() {
+        
+    if(document.querySelector('#type').value.length == 0){
+        alert("Please Enter a Subject First")
+    }
+  else{
+   let item=document.getElementById("type").value
+   let data=document.createTextNode(item)
+   let newdata=document.createElement("li")
+   newdata.appendChild(data)
+   
+   document.getElementById("num").appendChild(newdata)
+
+   type.value=" ";
+   newdata.addEventListener("click", function(){
+    newdata.style.textDecoration="line-through";
+   
+   })
+  }
+}
+newdata.addEventListener("click", function cl2(){
+    newdata.display="none"
+
+})
+  
+
+   
+
+
+
+
+
+</script>
+</html>
